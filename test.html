@@ -1,0 +1,49 @@
+﻿<input id=i><pre id=p></pre>
+
+
+<script>
+
+W = ["boons", "acorn", "gravy", "nanny", "sassy", "noobs", "eerie", "teeth", "gases"];
+
+
+/* --------- PASTE YOUR CODE HERE ----------*/
+
+
+w=W[new Date%W.length],g=6,onkeyup=e=>{e.which==13*W.includes(v=i.value)&&(a=[...w],p.innerHTML+=`
+`+[...v].map((e,n)=>e==a[n]?a[n]=0:e).map(e=>e?a[x=a.indexOf(e)]=~x?"🟨":"⬛":"🟩")+v,i.value=v!=w&&--g?"":w)}
+
+
+
+
+
+/* -------------- END ---------------------- */
+
+
+// TESTS
+
+w = "boons";
+g=8;
+i.value = "acorn";
+onkeyup({which:13});
+i.value = "gravy";
+onkeyup({which:13});
+i.value = "nanny";
+onkeyup({which:13});
+i.value = "sassy";
+onkeyup({which:13});
+i.value = "gases";
+onkeyup({which:13});
+i.value = "noobs";
+onkeyup({which:13});
+i.value = "boons";
+onkeyup({which:13});
+w = "teeth";
+g=6;
+i.value = "eerie";
+onkeyup({which:13});
+i.value = "teeth";
+onkeyup({which:13});
+
+if(p.innerHTML == '\n⬛,⬛,🟩,⬛,🟨acorn\n⬛,⬛,⬛,⬛,⬛gravy\n⬛,⬛,⬛,🟩,⬛nanny\n🟨,⬛,⬛,⬛,⬛sassy\n⬛,⬛,⬛,⬛,🟩gases\n🟨,🟩,🟩,🟨,🟩noobs\n🟩,🟩,🟩,🟩,🟩boons\n🟨,🟩,⬛,⬛,⬛eerie\n🟩,🟩,🟩,🟩,🟩teeth') document.write("<p>TESTS OK");
+
+</script>
